@@ -1,0 +1,55 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  --first-color: hsl(248, 74%, 58%);
+  --black-color: hsl(248, 24%, 10%);
+  --white-color: #fff;
+  --body-color: hsl(248, 100%, 99%);
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Poppins', sans-serif;
+  --small-font-size: .813rem;
+}
+
+/* Responsive typography */
+@media screen and (min-width: 1024px) {
+  :root {
+    --small-font-size: .875rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--body-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  margin-inline: 6rem 1rem;
+  padding-block: 2rem;
+}
+
+/*=============== SIDEBAR ===============*/
+
+
+/* Shapes */
+
+
+/* Active link */
