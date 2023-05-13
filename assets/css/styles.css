@@ -1,6 +1,5 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
-
 /*=============== VARIABLES CSS ===============*/
 :root {
   /*========== Colors ==========*/
@@ -8,13 +7,10 @@
   --black-color: hsl(248, 24%, 10%);
   --white-color: #fff;
   --body-color: hsl(248, 100%, 99%);
-
   /*========== Font and typography ==========*/
-  --body-font: 'Poppins', sans-serif;
+  --body-font: "Poppins", sans-serif;
   --small-font-size: .813rem;
 }
-
-/* Responsive typography */
 @media screen and (min-width: 1024px) {
   :root {
     --small-font-size: .875rem;
@@ -47,9 +43,86 @@ main {
 }
 
 /*=============== SIDEBAR ===============*/
-
-
-/* Shapes */
-
+.nav {
+  width: 72px;
+  height: max-content;
+  position: fixed;
+  inset: 0;
+  margin: auto 0;
+}
+.nav__list {
+  position: relative;
+  background-color: var(--first-color);
+  padding-block: 70px;
+  border-radius: 0 51px 51px 0;
+  display: grid;
+  justify-content: center;
+  row-gap: 2rem;
+}
+.nav__link {
+  position: relative;
+  display: inline-flex;
+  padding: 4px;
+  border-radius: 50%;
+  transition: background 0.4s;
+}
+.nav__link i {
+  font-size: 1.25rem;
+  color: var(--white-color);
+  transition: color 0.4s;
+}
+.nav__link:hover .nav__name {
+  opacity: 1;
+  transform: translateX(48px);
+}
+.nav__name {
+  position: absolute;
+  top: 0;
+  transform: translateX(56px);
+  background-color: var(--black-color);
+  color: var(--white-color);
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  padding: 6px 16px;
+  border-radius: 3rem;
+  pointer-events: none;
+  transition: transform 0.5s, opacity 0.5s;
+  opacity: 0;
+}
+.nav__circle-1, .nav__circle-2 {
+  width: 80px;
+  height: 80px;
+  background-color: var(--body-color);
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  z-index: 10;
+}
+.nav__circle-1 {
+  top: -78px;
+}
+.nav__circle-2 {
+  bottom: -78px;
+}
+.nav__square-1, .nav__square-2 {
+  width: 35px;
+  height: 40px;
+  background-color: var(--first-color);
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+.nav__square-1 {
+  top: -39px;
+}
+.nav__square-2 {
+  bottom: -39px;
+}
 
 /* Active link */
+.active-link {
+  background-color: var(--white-color);
+}
+.active-link i {
+  color: var(--first-color);
+}
